@@ -11,8 +11,8 @@ const db         = require('./lib/db');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-db.connect((dbInstance) => {
-  app.use('/tweets', tweetsApi(dbInstance));
+db.connect((Tweets) => {
+  app.use('/tweets', tweetsApi(Tweets));
 });
 
 app.listen(PORT, () => {
