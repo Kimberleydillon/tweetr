@@ -11,10 +11,13 @@
 
     <!-- External Google Roboto Condensed Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://use.fontawesome.com/f35a8ab156.js"></script>
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-containers.css" type="text/css" />
 
     <!-- External JS -->
 
@@ -32,6 +35,7 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <button class="button">Write Shit!</button>
     </nav>
 
 
@@ -40,12 +44,51 @@
     <main class="container">
 <section class="new-tweet">
   <h2>Compose Tweet</h2>
-  <form>
-    <textarea name="text" placeholder="What are you humming about?"></textarea>
+  <form id='composedTweet' method='POST" action='/tweets/'>
+    <textarea class='tweetText' name="text" placeholder="What are you humming about?"></textarea>
     <input type="submit" value="Tweet">
     <span class="counter">140</span>
+    <span class="errorMsgs"> </span>
   </form>
 </section>
+
+<section id="feed">
+       <article class="thetweets">
+         <header>
+           <img class="avatar" src="/images/coolcat.png" />
+           <h2 class="name">Cool Wink</h2>
+           <p class="handle">@coolwink</p>
+         </header>
+         <main>
+           <p>;)</p>
+         </main>
+         <footer>
+           <p>10 days ago</p>
+           <i class="fa fa-heart" aria-hidden="true"></i>
+           <i class="fa fa-retweet" aria-hidden="true"></i>
+           <i class="fa fa-flag" aria-hidden="true"></i>
+         </footer>
+       </article>
+     </section>
+<!-- <section class="tweet-container">
+ <article>
+        <header>
+
+        <h1><img class="profilepic" src="/images/coolcat.png" width="66px" height="66px">Cool Winky</h1>
+        <h2>@coolWinky</h2>
+
+
+                //<img src=> add profile image here
+        </header>
+        <div class="content-container">
+        <p> *Wink, Wink* ;) </p>
+        </div>
+
+        <footer>
+        <p> 10days ago </p>
+      </footer>
+</article>
+</section> -->
     </main>
 
   </body>

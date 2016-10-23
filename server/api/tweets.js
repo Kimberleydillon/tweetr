@@ -7,6 +7,7 @@ const tweets  = express.Router();
 module.exports = function(db) {
 
   tweets.get("/", function(req, res) {
+    console.log(YOUR FACE);
     let tweets = db.getTweets();
     // simulate delay
     setTimeout(() => {
